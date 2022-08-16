@@ -15,7 +15,7 @@ Author: Gamze Turan
 
 ## Business Understanding
 
-<img align="left" width="900" height="300" src='Images/main-screen.png'>
+<img align="left" width="600" height="300" src='Images/main-screen.png'>
 
 
 
