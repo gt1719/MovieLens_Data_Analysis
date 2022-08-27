@@ -109,10 +109,10 @@ For additional info, contact Gamze Turan at ginaturan15@gmail.com
 
 ├── Data
 
+├── Deliverables
+
 ├── Images
 
-├── MovieLens_Data_Analysis.ipynb
+├── MovieLens_Recommendation_System.ipynb
 
-├── README.md
-
-└── 
+└── README.md
