@@ -2,24 +2,26 @@
 <img align="center" width="900" height="300" src='Images/MovieLens.png'>
 
 
-# MovieLens Data Anaysis
+ # MovieLens Recomendation System
 
 
 Author: Gamze Turan
 
 
-## Overview
+ ## Overview
 
 Movielens is a website that helps users find movies they will like. It users ratings given by the user to build a custom taste profile of that particular user and then utilizes that information to recommend other movies for the user to watch.
 
-## Business Understanding
+ ## Business Understanding
 
-<img align="left" width="600" height="300" src='Images/main-screen.png'>
+
+<img align="center" width="600" height="300" src='Images/main-screen.png'>
+
 
 Our goal is to build a variety of recommendation engines and improve upon predictions iteratively so that the end user can be provided with better movie suggestions.
 
 
-## Data Understanding
+ ## Data Understanding
 
 The datasets describe ratings and free-text tagging activities from [MovieLens](https://movielens.org/), a movie recommendation service.
 
@@ -29,36 +31,49 @@ It contains 100836 ratings and 3683 tag applications across 9742 movies. These d
 
 The dataset is distributed among four csv files: `links.csv`, `movies.csv`, `ratings.csv`, `tags.csv`.
 
-## Data analysis
 
-<img align="left" width="400" height="100" src='Images/movie_rating.png'>   <img align="left" width="400" height="100" src='Images/genres.png'>
+ ## Data analysis
 
-<img align="left" width="400" height="100" src='Images/movie_year.png'>
+<img align="left" width="600" height="300" src='Images/movie_rating.png'>  The mean rating given by users is approximately 3.5.
+The most common rating in the dataset is 4.
+Most of the ratings in the dataset are above 3.
 
-## Naive Recommendation Engine (New User)
+
+<img align="left" width="400" height="100" src='Images/genres.png'> Drama is the most popular genre in our dataset with 4357 movies, followed by Comedy with 3755 movies.
+
+
+<img align="left" width="600" height="300" src='Images/mean_num_rating.png'> Movies that are more popular (higher number of ratings) in our dataset have higher mean ratings as well.
+
+
+ ## Naive Recommendation Engine (New User)
 
 Model recommends the most popular movies in our dataset to **new user**. Movies are sorted by both the number of ratings and their average rating in our dataset. 
 I allow users to specify their preferred genre as well.
 
-<img align="left" width="400" height="100" src='Images/Naive_all_genre.png'> <img align="left" width="400" height="100" src='Images/Naive_Animation_genre.png'>
+<img align="center" width="600" height="300" src='Images/Naive_all_100.png'> 
 
-## Collaborative-Filtering based Recommendation Engine (Existing User)
-
-Model recommends those movies that haven’t been watched by this user and were loved by other users with similar taste. 
+<img align="center" width="600" height="300" src='Images/Naive_Animation_105.png'>
 
 
+ ## Collaborative-Filtering based Recommendation Engine (Existing User)
 
-## Recommended Movies
+Model recommends those movies that haven’t been watched by this user and were loved by other users with similar taste.
+
+<img align="center" width="300" height="600" src='Images/Collobrative_filtering.png'>
+
+
+ ## Recommended Movies
 
 When user is new, use naïve recommendation engine and only look at the most popular movies
 
-
+<img align="center" width="600" height="300" src='Images/new_children_100.png'>
 
 When user has provided some ratings in the database, consider that information and try to find similar movies based on his/her taste. 
 
+<img align="center" width="600" height="300" src='Images/5_children_100.png'>
 
 
-## Conclusion
+ ## Conclusion
 
 I analyzed a variety of movie recommendation systems on the famous MovieLens database. I started with a naive recommendation engine which did not make any assumptions about the user and provided general recommendations based upon movie popularity or the average ratings given by other users in the database.
 
